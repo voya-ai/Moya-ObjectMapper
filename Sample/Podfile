@@ -1,4 +1,4 @@
-source 'https://github.com/CocoaPods/Specs.git'
+source 'https://cdn.cocoapods.org/'
 
 use_frameworks!
 
@@ -9,7 +9,7 @@ end
 
 def libraries_rx_swift
   pod 'Moya-ObjectMapper/RxSwift', :path => "../"
-  pod 'Moya/RxSwift'
+  pod 'Moya/RxSwift' 
   pod 'RxSwift' #, :git => 'https://github.com/ReactiveX/RxSwift'
   pod 'RxDataSources'
   pod 'RxCocoa'
@@ -36,21 +36,21 @@ def test_pods
 end
 
 target 'Demo' do
-  platform :ios, '10.0'
+  platform :ios, '14.0'
   required_pods
   libraries
 end
 
 target 'Demo-RxSwift' do
-  platform :ios, '10.0'
+  platform :ios, '14.0'
   required_pods
   libraries
   libraries_rx_swift
 end
 
 target 'Demo-ReactiveSwift' do
-  platform :ios, '10.0'
-  required_pods
+  platform :ios, '14.0'
+  required_pods 
   libraries
   libraries_reactive_swift
 end
